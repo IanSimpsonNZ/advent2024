@@ -1,7 +1,3 @@
-// import 'dart:io';
-
-// import 'dart:io';
-
 Future<int> solution1(Stream<String> lines) async {
   int oklines = 0;
   await for (final line in lines) {
@@ -15,9 +11,7 @@ Future<int> solution1(Stream<String> lines) async {
         ok = false;
         break;
       } else if (i == 1) {
-        if (diff > 0) {
-          increasing = true;
-        } else {
+        if (diff < 0) {
           increasing = false;
         }
       } else {
